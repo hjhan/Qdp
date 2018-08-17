@@ -1,35 +1,34 @@
 ![image](http://yieldchain.com/static/img/logo_md_new.png)
 # Qdp（Quantatitive Derivative Pricing)
-[Instrudction In English](https://github.com/YieldChain/Qdp/blob/master/README_EN.md)
-## 简介
-Qdp是一套基于C#开发的金融衍生品估值定价库，可以对金融衍生品进行模型定价，计算衍生品风险和盈亏归因等。
+## Introduction
+Qpd is a pricing library for financial derivatives developed in C#. It can calculate model price, risks and pnl explain for derivatives.
 
-### 为什么用C#?
-+ 比C++开发更容易，比Python运行效率高
-+ 可以很容易封装成Excel Addin
-+ 利用.NET生态，容易扩展成分布式集群计算
-+ 在兼容.NET Core后，跨平台也不是问题
+### Why in C#?
++ Easier than C++，more efficient than Python
++ Easy to build Excel Addin
++ Based on .NET，easy to extend to distributed computing cluster
++ Cross-platform is not a problem after supporting .NET Core
 
-## 运行时要求
-+ .NET Framework 4.0+ 或者
+## Runtime Requirements
++ .NET Framework 4.0+ or
 + .NET Core 2.1+
 
-## 如何开始
-+ 获得源码
-+ 如果需要.NET Framework版本, 请用Visual Studio 2017打开PricingLibrary.sln；如果需要.NET Core版本，请用Visual Studio 2017打开PricingLibrary_DotNetCore.sln
-+ 编译整个解决方案
+## How to start
++ Get the source code
++ If you need .NET Framework version, open PricingLibrary.sln in Visual Studio 2017；if you need .NET Core version，open PricingLibrary_DotNetCore.sln in Visual Studio 2017
++ Build whole solution
 
-## 使用说明
-Qdp中计算的三个基本概念：Instrument/MarketCondition/Engine。
+## How to use
+There're three basic concepts in Qdp：Instrument/MarketCondition/Engine。
 
-+ Instrument： 定义一个金融产品或衍生品
-+ MarketCondition： 定义一个市场条件
-+ Engine： 定义一个计算引擎
++ Instrument： Define an instrument in financial market
++ MarketCondition： Define a 
++ Engine： Define an engine to implement the pricing model
 
-在Qdp中，每一个定价计算都是某一个Instrument在给定的MarketCondition下，使用特定的Engine所得到的计算结果，这是Qdp中最基础的计算方式。
+In Qpd, each "calculation" is an Instrument being calculated by a particular Engine under certain MarketCondition. This is basicly how Qpd works.
 
-以下是示例代码：
-### 债券计算
+Some sample code：
+### Bond
 ```CSharp
     var bond = new Bond(
         id: "bond",
@@ -60,7 +59,7 @@ Qdp中计算的三个基本概念：Instrument/MarketCondition/Engine。
     var result = engine.Calculate(bond, market, PricingRequest.Ytm);
 ```
 
-### 期权计算
+### Options
 ```CSharp
     var startDate = new Date(2014, 03, 18);
     var maturityDate = new Date(2015, 03, 18);
@@ -140,9 +139,9 @@ Qdp中计算的三个基本概念：Instrument/MarketCondition/Engine。
     var result = engine.Calculate(put, market, PricingRequest.All);
 ```
 
-## 参考文档
-建设中...
+## Document
+Coming soon...
 
-## 技术支持
-+ Qdp由镒链科技技术团队维护. www.yieldchain.com
-+ 有任何问题请联系<support@yieldchain.com>.
+## Support
++ Qdp is actively maintained by YieldChain. www.yieldchain.com
++ Please contact <support@yieldchain.com>.
