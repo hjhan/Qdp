@@ -1,10 +1,10 @@
 ![image](http://yieldchain.com/static/img/logo_md_new.png)
 # Qdp£¨Quantatitive Derivative Pricing)
 ## Introduction
-Qpd is a pricing library for financial derivatives developed in C#. It can calculate model price, risks and pnl explain for derivatives.
+Qpd is a pricing library for financial derivatives developed in C#. It can be used to calculate model price, risks and pnl explain for derivatives.
 
 ### Why in C#?
-+ Easier than C++£¬more efficient than Python
++ Easier than C++£¬better performance than Python
 + Easy to build Excel Addin
 + Based on .NET£¬easy to extend to distributed computing cluster
 + Cross-platform is not a problem after supporting .NET Core
@@ -22,7 +22,7 @@ Qpd is a pricing library for financial derivatives developed in C#. It can calcu
 There're three basic concepts in Qdp£ºInstrument/MarketCondition/Engine¡£
 
 + Instrument£º Define an instrument in financial market
-+ MarketCondition£º Define a 
++ MarketCondition£º Define a market condition with various market information (prices, vols, curves, etc.)
 + Engine£º Define an engine to implement the pricing model
 
 In Qpd, each "calculation" is an Instrument being calculated by a particular Engine under certain MarketCondition. This is basicly how Qpd works.

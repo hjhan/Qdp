@@ -1,6 +1,6 @@
 ![image](http://yieldchain.com/static/img/logo_md_new.png)
 # Qdp（Quantatitive Derivative Pricing)
-[Instrudction In English](https://github.com/YieldChain/Qdp/blob/master/README_EN.md)
+[Introduction In English](https://github.com/YieldChain/Qdp/blob/master/README_EN.md)
 ## 简介
 Qdp是一套基于C#开发的金融衍生品估值定价库，可以对金融衍生品进行模型定价，计算衍生品风险和盈亏归因等。
 
