@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Qdp.ComputeService.Data.CommonModels.Applications.CsWorkerConfig" Collapsed="true">
+    <Position X="59.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Applications\CsWorkerConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.CsPricingRequest" Collapsed="true">
+    <Position X="52.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAgABAAAIAEAAAABAAAAAAAABAAQA=</HashCode>
+      <FileName>CsPricingRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.CsPricingResult" Collapsed="true">
+    <Position X="56" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAQAgAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CsPricingResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.BondMktData" Collapsed="true">
+    <Position X="7.75" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAQAAAAAAAAACAwAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\BondMktData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.CommodityMktData" Collapsed="true">
+    <Position X="12.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\CommodityMktData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.FuturesMktData" Collapsed="true">
+    <Position X="16.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>MarketInfos\FuturesMktData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MarketDataDefinition" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAQAAAAIEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MarketDataDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MarketInfo" Collapsed="true">
+    <Position X="62.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECBgAgBABAAAAGAEBQAAQACAAAAAECgAAANEACJAIAg=</HashCode>
+      <FileName>MarketInfos\MarketInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.RateMktData" Collapsed="true">
+    <Position X="1" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAgIAAAAAAAAAAAAAAAAAAAAABAkAAAAAAACA=</HashCode>
+      <FileName>MarketInfos\RateMktData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.StockMktData" Collapsed="true">
+    <Position X="3.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\StockMktData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.TreasuryFutureMktData" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\TreasuryFutureMktData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.VolSurfMktData" Collapsed="true">
+    <Position X="10" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAABQAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>MarketInfos\VolSurfMktData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.CurveDefinitions.CurveConvention" Collapsed="true">
+    <Position X="14.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgCAAAAAAAAAAAgAACAAAAQAEAAAAAEAAAAA=</HashCode>
+      <FileName>MarketInfos\CurveDefinitions\CurveConvention.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.CurveDefinitions.InstrumentCurveDefinition" Collapsed="true">
+    <Position X="19" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAgAAAgAAAAAAIkAAAAAIABAAAIAA=</HashCode>
+      <FileName>MarketInfos\CurveDefinitions\InstrumentCurveDefinition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MktCalibrationInstruments.MktInstrumentCdsRule" Collapsed="true">
+    <Position X="52.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MktCalibrationInstruments\MktInstrumentCdsRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MktCalibrationInstruments.MktCdsJson" Collapsed="true">
+    <Position X="58" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAIAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MktCalibrationInstruments\MktInstrumentCdsRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MktCalibrationInstruments.MktInstrumentDepositRule" Collapsed="true">
+    <Position X="56.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MktCalibrationInstruments\MktInstrumentDepositRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MktCalibrationInstruments.MktDepositJson" Collapsed="true">
+    <Position X="59.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MktCalibrationInstruments\MktInstrumentDepositRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MktCalibrationInstruments.MktInstrumentFxRule" Collapsed="true">
+    <Position X="58" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MktCalibrationInstruments\MktInstrumentFxRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MktCalibrationInstruments.MktInstrumentIrsRule" Collapsed="true">
+    <Position X="59.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MktCalibrationInstruments\MktInstrumentIrsRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.MktCalibrationInstruments.MktIrsJson" Collapsed="true">
+    <Position X="52.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAQAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\MktCalibrationInstruments\MktInstrumentIrsRule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.Utilities.MktBuildConfig" Collapsed="true">
+    <Position X="52.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MarketInfos\Utilities\MktBuildConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.MarketInfos.Utilities.MktCacheConfig" Collapsed="true">
+    <Position X="56.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAACCAAAAAAA=</HashCode>
+      <FileName>MarketInfos\Utilities\MktCacheConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.Commodity.CommodityForward" Collapsed="true">
+    <Position X="43" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TradeInfos\Commodity\CommodityForward.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.Equity.AsianOptionInfo" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGACJAAAEAAAAAAgEDokiAAEACgAAEAAAACEAAAAA=</HashCode>
+      <FileName>TradeInfos\Equity\AsianOptionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.Equity.BarrierOptionInfo" Collapsed="true">
+    <Position X="9.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGASJAIAFIAAIAAgEDokiAAEACgAgEAAAADEAAAAk=</HashCode>
+      <FileName>TradeInfos\Equity\BarrierOptionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.Equity.BinaryOptionInfo" Collapsed="true">
+    <Position X="16" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGACJAgAEAAAIAAgEDokCCAEACgAAEAIAACEAAAAA=</HashCode>
+      <FileName>TradeInfos\Equity\BinaryOptionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.Equity.RangeAccrualInfo" Collapsed="true">
+    <Position X="22.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGACJAAAEACAAAAgEDokiAAEACgAAEAAAACEAAAAA=</HashCode>
+      <FileName>TradeInfos\Equity\RangeAccrualInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.Equity.VanillaOptionInfo" Collapsed="true">
+    <Position X="27.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGACJAAAEAAAAAAgEDokCAAEACgAAEAAAACEAAAAE=</HashCode>
+      <FileName>TradeInfos\Equity\VanillaOptionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.BasisSwapInfo" Collapsed="true">
+    <Position X="34" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggoRGQAAABDAAAAhACQACEAAgAABAAiAEEAkAIE=</HashCode>
+      <FileName>TradeInfos\FixedIncome\BasisSwapInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.BondFuturesInfo" Collapsed="true">
+    <Position X="38.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAABCgAACBAAgAAEEAAGAEABABA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\BondFuturesInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.BondInfoBase" Collapsed="true">
+    <Position X="47.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAFFAGIIDAggIAEAIBoBAgAhCwAggAANAACWAkAETQA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\BondInfoBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.ConvertibleBondInfo" Collapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAEAAAAAAAAIAAAAAAAAAgAIgAAGAAAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\ConvertibleBondInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.CreditDefaultSwapInfo" Collapsed="true">
+    <Position X="11.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQEEAAIAAAABAgAADIAAgIAEAAAAAEAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\CreditDefaultSwapInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.DepositInfo" Collapsed="true">
+    <Position X="18.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAIAAAAAAgAACAAAgAAEAAACAEAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\DepositInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.FixedDateCouonAdjustedBondInfo" Collapsed="true">
+    <Position X="45.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAAIEAAAAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\FixedDateCouonAdjustedBondInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.FixedLegInfo" Collapsed="true">
+    <Position X="29.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAASAAAAACAAABAAAACAAAgAAFAAgGAMAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\FixedLegInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.FixedRateBondInfo" Collapsed="true">
+    <Position X="47.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\FixedRateBondInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.FloatingLegInfo" Collapsed="true">
+    <Position X="40.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAASAIIAQBIAAAAAAABAAAACEAAoAQFAAkCAEAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\FloatingLegInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.FloatingRateBondInfo" Collapsed="true">
+    <Position X="49.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAIAABgCAAAAAAAAAAAAEAABIQAAIkCAAAAAAg=</HashCode>
+      <FileName>TradeInfos\FixedIncome\FloatingRateBondInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.FxOptionInfo" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAJABAEAAAAEAgFCgkCAEEAAiAAAAAACAEAQAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\FxOptionInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.FxSpotInfo" Collapsed="true">
+    <Position X="13.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAABAAAAAAgAgFCggAAEAAAgAAAAAAAAEAQAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\FxSpotInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.HoldingPeriodInfo" Collapsed="true">
+    <Position X="20.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAkAAAAAAAAAAAGCAiABCAAgAQAMAAAAAAAEAEAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\HoldingPeriodInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.InterestRateSwapInfo" Collapsed="true">
+    <Position X="25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAASAIIASBAAAACAAABAAABCEAAoAQFAAkGAMAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\InterestRateSwapInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.LoanInfo" Collapsed="true">
+    <Position X="31.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIgAQAABAKAAgAhAgAAHIgAkEAIIoAAAEAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\LoanInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.FixedIncome.AbsWithRepurchaseInfo" Collapsed="true">
+    <Position X="36.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAACAAAAAgAAEEAAAAAAA=</HashCode>
+      <FileName>TradeInfos\FixedIncome\LoanWithRepurchaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.TradeInfoBase" Collapsed="true">
+    <Position X="26.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEACAAAIIAAEAABAAAAAABgCAAAiQgAEAGAAAEAAA=</HashCode>
+      <FileName>TradeInfos\TradeInfoBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.TradeInfos.Utilities.TradeInfoConverter" Collapsed="true">
+    <Position X="56.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TradeInfos\Utilities\TradeInfoConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.ValuationParams.Equity.OptionValuationParameters" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAIAAAIAAAAAAAAAAAAAAAAIAABAAAAA=</HashCode>
+      <FileName>ValuationParams\Equity\OptionValuationParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.ValuationParams.FixedIncome.BasisSwapValuationParameters" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAEAAAAAAAAAAAAAAIAAAABAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ValuationParams\FixedIncome\BasisSwapValuationParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.ValuationParams.FixedIncome.CdsValuationParameters" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAIAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ValuationParams\FixedIncome\CdsValuationParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.ValuationParams.FixedIncome.FxOptionValuationParameters" Collapsed="true">
+    <Position X="7.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAEAAAAAQAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ValuationParams\FixedIncome\FxOptionValuationParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.ValuationParams.FixedIncome.SimpleCfValuationParameters" Collapsed="true">
+    <Position X="9.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAEIAAAAAAAA=</HashCode>
+      <FileName>ValuationParams\FixedIncome\SimpleCfValuationParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Qdp.ComputeService.Data.CommonModels.ValuationParams.ValuationParameters" Collapsed="true">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>ValuationParams\ValuationParameters.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="微软雅黑" Size="9" />
+</ClassDiagram>

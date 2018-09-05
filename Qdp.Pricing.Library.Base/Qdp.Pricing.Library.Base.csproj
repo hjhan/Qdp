@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C3AC4EC-7BBA-40A2-8C26-BA759020EED6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qdp.Pricing.Library.Base</RootNamespace>
+    <AssemblyName>Qdp.Pricing.Library.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Curves\Curve2D.cs" />
+    <Compile Include="Curves\Interfaces\ICurve.cs" />
+    <Compile Include="Curves\Interfaces\ICurve2D.cs" />
+    <Compile Include="Curves\Interfaces\IInterpolator.cs" />
+    <Compile Include="Curves\Interfaces\ISpread.cs" />
+    <Compile Include="Curves\Interfaces\IVolSurf.cs" />
+    <Compile Include="Curves\Interpolators\BiLinearInterpolator.cs" />
+    <Compile Include="Curves\Interpolators\ConvexMonoticInterpolator.cs" />
+    <Compile Include="Curves\Interpolators\CubicHermiteFdInterpolator.cs" />
+    <Compile Include="Curves\Interpolators\ExponentialSplineInterpolator.cs" />
+    <Compile Include="Curves\Interpolators\ForwardFlatInterpolator.cs" />
+    <Compile Include="Curves\Interpolators\InterpolationExtension.cs" />
+    <Compile Include="Curves\Interpolators\LogCubicInterpolator.cs" />
+    <Compile Include="Curves\Interpolators\LogLinearInterpolator.cs" />
+    <Compile Include="Implementations\Amortization.cs" />
+    <Compile Include="Implementations\Schedule.cs" />
+    <Compile Include="Interfaces\IAmortization.cs" />
+    <Compile Include="Interfaces\IInstrument.cs" />
+    <Compile Include="Curves\Curve.cs" />
+    <Compile Include="Curves\Interpolators\CubicHermiteMonotonicInterpolator.cs" />
+    <Compile Include="Curves\Interpolators\LinearInterpolator.cs" />
+    <Compile Include="Interfaces\ISetOnce.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ArrayExtensions.cs" />
+    <Compile Include="Utilities\EnumerableDoubleExtension.cs" />
+    <Compile Include="Utilities\EnumerableExtension.cs" />
+    <Compile Include="Utilities\MatrixExtension.cs" />
+    <Compile Include="Utilities\PricingLibraryException.cs" />
+    <Compile Include="Utilities\SetOnce.cs" />
+    <Compile Include="Utilities\SwapDirectionExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation.csproj">
+      <Project>{30ec6e1b-63a1-4985-b9b2-071203940bd6}</Project>
+      <Name>Qdp.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base.csproj">
+      <Project>{7281d9ad-8878-4b41-af55-e4f42211d07f}</Project>
+      <Name>Qdp.Pricing.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /E /Y $(SolutionDir)\Dependencies\nlopt-zip\* $(SolutionDir)\build\UnitTest\Debug\</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

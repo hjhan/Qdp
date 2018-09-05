@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B71D997-9452-4D68-B3DC-E50D01115DE3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qdp.ComputeService.Data.CommonModels</RootNamespace>
+    <AssemblyName>Qdp.ComputeService.Data.CommonModels</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MarketInfos\CorrSurfMktData.cs" />
+    <Compile Include="MarketInfos\FxFixingMktData.cs" />
+    <Compile Include="MarketInfos\TreasuryFutureMktData.cs" />
+    <Compile Include="MarketInfos\FuturesMktData.cs" />
+    <Compile Include="MarketInfos\CurveDefinitions\CurveConvention.cs" />
+    <Compile Include="MarketInfos\CurveDefinitions\InstrumentCurveDefinition.cs" />
+    <Compile Include="MarketInfos\MktCalibrationInstruments\MktInstrumentCdsRule.cs" />
+    <Compile Include="MarketInfos\MktCalibrationInstruments\MktInstrumentDepositRule.cs" />
+    <Compile Include="MarketInfos\MktCalibrationInstruments\MktInstrumentFxRule.cs" />
+    <Compile Include="MarketInfos\MktCalibrationInstruments\MktInstrumentIrsRule.cs" />
+    <Compile Include="MarketInfos\Utilities\MktBuildConfig.cs" />
+    <Compile Include="MarketInfos\Utilities\MktCacheConfig.cs" />
+    <Compile Include="CsPricingResult.cs" />
+    <Compile Include="MarketInfos\BondMktData.cs" />
+    <Compile Include="MarketInfos\CommodityMktData.cs" />
+    <Compile Include="MarketInfos\MarketDataDefinition.cs" />
+    <Compile Include="MarketInfos\MarketInfo.cs" />
+    <Compile Include="MarketInfos\RateMktData.cs" />
+    <Compile Include="MarketInfos\StockMktData.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CsPricingRequest.cs" />
+    <Compile Include="TradeInfos\Commodity\CommodityForwardCNYInfo.cs" />
+    <Compile Include="TradeInfos\Commodity\CommoditySwapInfo.cs" />
+    <Compile Include="TradeInfos\Equity\BarrierOptionInfo.cs" />
+    <Compile Include="TradeInfos\Equity\AsianOptionInfo.cs" />
+    <Compile Include="TradeInfos\Equity\BinaryOptionInfo.cs" />
+    <Compile Include="TradeInfos\Equity\LookbackOptionInfo.cs" />
+    <Compile Include="TradeInfos\Equity\RainbowOptionInfo.cs" />
+    <Compile Include="TradeInfos\Equity\RangeAccrualInfo.cs" />
+    <Compile Include="TradeInfos\Equity\ResetStrikeOptionInfo.cs" />
+    <Compile Include="TradeInfos\Equity\SpreadOptionInfo.cs" />
+    <Compile Include="TradeInfos\Equity\VanillaOptionInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\BasisSwapInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\BondFuturesInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\BondInfoBase.cs" />
+    <Compile Include="TradeInfos\FixedIncome\ConvertibleBondInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\CreditDefaultSwapInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\DepositInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\FixedDateCouonAdjustedBondInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\FixedLegInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\FixedRateBondInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\FloatingLegInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\FloatingRateBondInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\FxOptionInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\FxSpotInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\HoldingPeriodInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\InterestRateSwapInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\LoanWithRepurchaseInfo.cs" />
+    <Compile Include="TradeInfos\FixedIncome\LoanInfo.cs" />
+    <Compile Include="TradeInfos\TradeInfoBase.cs" />
+    <Compile Include="MarketInfos\VolSurfMktData.cs" />
+    <Compile Include="TradeInfos\Utilities\TradeInfoConverter.cs" />
+    <Compile Include="ValuationParams\FixedIncome\BasisSwapValuationParameters.cs" />
+    <Compile Include="ValuationParams\FixedIncome\SimpleCfValuationParameters.cs" />
+    <Compile Include="ValuationParams\FixedIncome\CdsValuationParameters.cs" />
+    <Compile Include="ValuationParams\Equity\OptionValuationParameters.cs" />
+    <Compile Include="ValuationParams\FixedIncome\FxOptionValuationParameters.cs" />
+    <Compile Include="ValuationParams\ValuationParameters.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValuationParams\Commodity\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Configurations\MarketInstrumentConventions\Cds.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configurations\MarketInstrumentConventions\Deposit.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configurations\MarketInstrumentConventions\Fx.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Configurations\MarketInstrumentConventions\Irs.cfg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation.csproj">
+      <Project>{30ec6e1b-63a1-4985-b9b2-071203940bd6}</Project>
+      <Name>Qdp.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base.csproj">
+      <Project>{7281d9ad-8878-4b41-af55-e4f42211d07f}</Project>
+      <Name>Qdp.Pricing.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

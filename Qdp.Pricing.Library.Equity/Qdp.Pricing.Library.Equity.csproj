@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F17B5431-9905-44AE-955D-D6417A986613}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qdp.Pricing.Library.Equity</RootNamespace>
+    <AssemblyName>Qdp.Pricing.Library.Equity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\build\Debug\Qdp.Pricing.Library.Equity.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=3.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\mathnet-zip\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engines\Analytical\AnalyticalAsianOptionEngineLegacy.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalAsianOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalBinaryAmericanOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalDoubleBarrierEuropeanOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalBarrierEuropeanOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalBinaryEuropeanOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalBinaryEuropeanOptionReplicationEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalFxOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalLookbackOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalOptionPricerUtil.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalOptionTradeVolInterp.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalRainbowOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalRangeAccrualEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalResetStrikeOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalSpreadOptionBjerksundEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalSpreadOptionEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalSpreadOptionKirkEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalVanillaAmericanOptionBAWEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalVanillaAmericanOptionBSEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalVanillaEuropeanOptionEngine.cs" />
+    <Compile Include="Engines\BaseNumericalOptionEngine.cs" />
+    <Compile Include="Engines\MonteCarlo\GenericMonteCarloEngine.cs" />
+    <Compile Include="Engines\MonteCarlo\McDkoBbEngine.cs" />
+    <Compile Include="Engines\Note\ConstantLeveragedNoteEngine.cs" />
+    <Compile Include="Engines\Note\DynamicLeveragedNoteEngine.cs" />
+    <Compile Include="Engines\Note\EquityLinkedNoteEngine.cs" />
+    <Compile Include="Engines\Numerical\BinomialTreeAmericanEngine.cs" />
+    <Compile Include="Engines\Numerical\FdAmericanOptionEngine.cs" />
+    <Compile Include="Fx\FxOption.cs" />
+    <Compile Include="Interfaces\IOption.cs" />
+    <Compile Include="Notes\ConstantLeveragedNote.cs" />
+    <Compile Include="Notes\DynamicLeveragedNote.cs" />
+    <Compile Include="Options\AsianOption.cs" />
+    <Compile Include="Options\BarrierOption.cs" />
+    <Compile Include="Options\BinaryOption.cs" />
+    <Compile Include="Options\EquityLinkedNote.cs" />
+    <Compile Include="Options\LookbackOption.cs" />
+    <Compile Include="Options\OptionBase.cs" />
+    <Compile Include="Options\RainbowOption.cs" />
+    <Compile Include="Options\RangeAccrual.cs" />
+    <Compile Include="Options\DoubleSharkFinOption.cs" />
+    <Compile Include="Options\ResetStrikeOption.cs" />
+    <Compile Include="Options\SpreadOption.cs" />
+    <Compile Include="Options\Swaption.cs" />
+    <Compile Include="Options\VanillaOption.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\RangeDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.ComputeService.Data.CommonModels\Qdp.ComputeService.Data.CommonModels.csproj">
+      <Project>{0B71D997-9452-4D68-B3DC-E50D01115DE3}</Project>
+      <Name>Qdp.ComputeService.Data.CommonModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation.csproj">
+      <Project>{30ec6e1b-63a1-4985-b9b2-071203940bd6}</Project>
+      <Name>Qdp.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base.csproj">
+      <Project>{7281d9ad-8878-4b41-af55-e4f42211d07f}</Project>
+      <Name>Qdp.Pricing.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Base\Qdp.Pricing.Library.Base.csproj">
+      <Project>{4c3ac4ec-7bba-40a2-8c26-ba759020eed6}</Project>
+      <Name>T</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Common\Qdp.Pricing.Library.Common.csproj">
+      <Project>{faa5f77f-1abf-4144-8c70-a72632719bcb}</Project>
+      <Name>Qdp.Pricing.Library.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

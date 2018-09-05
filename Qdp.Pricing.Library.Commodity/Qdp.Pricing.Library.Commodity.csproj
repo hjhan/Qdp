@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0304B878-D0A0-406A-BFD9-7860C03658A0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qdp.Pricing.Library.Commodity</RootNamespace>
+    <AssemblyName>Qdp.Pricing.Library.Commodity</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CommodityProduct\CommodityForward.cs" />
+    <Compile Include="CommodityProduct\CommodityForwardCNY.cs" />
+    <Compile Include="CommodityProduct\CommoditySwap.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalCommodityForwardEngine.cs" />
+    <Compile Include="Engines\Analytical\AnalyticalCommoditySwapEngine.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation.csproj">
+      <Project>{30ec6e1b-63a1-4985-b9b2-071203940bd6}</Project>
+      <Name>Qdp.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base.csproj">
+      <Project>{7281d9ad-8878-4b41-af55-e4f42211d07f}</Project>
+      <Name>Qdp.Pricing.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Base\Qdp.Pricing.Library.Base.csproj">
+      <Project>{4c3ac4ec-7bba-40a2-8c26-ba759020eed6}</Project>
+      <Name>T</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Common\Qdp.Pricing.Library.Common.csproj">
+      <Project>{faa5f77f-1abf-4144-8c70-a72632719bcb}</Project>
+      <Name>Qdp.Pricing.Library.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

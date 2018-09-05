@@ -1,0 +1,136 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.ComputeService.Data.CommonModels\Qdp.ComputeService.Data.CommonModels_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Ecosystem\Qdp.Pricing.Ecosystem_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Library.Base\Qdp.Pricing.Library.Base_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Library.Commodity\Qdp.Pricing.Library.Commodity_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Library.Common\Qdp.Pricing.Library.Common_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Library.Equity\Qdp.Pricing.Library.Equity_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Library.Exotic\Qdp.Pricing.Library.Exotic_DotNetCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Data\101658062.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Benchmark\YieldcurveBuiltResult.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\ConversionFactorTest.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\QbT1609BasisTest.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\QbTF1606CfTest.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\QbTF1609CfTest.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\QbTF1612CfTest.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\QbTfDeliverableBond.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\TF1509DeliverableBondInfo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\TF1512DeliverableBondInfo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\TF1712DeliverableBondInfo_20171113.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\BondFuture\TF1712DeliverableBondInfo_20171114.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalEquityPrices\hs300.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalEquityPrices\hsgy.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\B1M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\B1W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\B2W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\B_1M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\B_1W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\B_2W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Depo1Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Depo3M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Depo3Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Depo6M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Fr001.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Fr007.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Lrb5Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Shibor1D.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Shibor1M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Shibor1W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Shibor1Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Shibor3M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\HistoricalIndexRates\Shibor6M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\Xl\MarketInfoJson.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /E /Y $(SolutionDir)\Dependencies\nlopt-zip\* $(SolutionDir)\UnitTest\bin\Debug\netcoreapp2.1\" />
+  </Target>
+
+</Project>

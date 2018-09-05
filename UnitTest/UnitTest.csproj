@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD5D3077-41D0-4C2A-AA7A-47E2D21E5656}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UnitTest</RootNamespace>
+    <AssemblyName>UnitTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\UnitTest\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\UnitTest\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MathNet.Numerics, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Dependencies\mathnet-zip\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="BaseTests\BaseTest.cs" />
+    <Compile Include="BaseTests\CalendarTest.cs" />
+    <Compile Include="BaseTests\LogLinearInterpolatorTest.cs" />
+    <Compile Include="BaseTests\TestBiLinearInterpolation.cs" />
+    <Compile Include="BaseTests\TestSolver.cs" />
+    <Compile Include="Commodity\CommodityBarrierOptionTest.cs" />
+    <Compile Include="Commodity\CommodityBinaryOptionTest.cs" />
+    <Compile Include="Commodity\CommodityForwardTest.cs" />
+    <Compile Include="Commodity\CommodityLookbackOptionTest.cs" />
+    <Compile Include="Commodity\CommodityRainbowOptionTest.cs" />
+    <Compile Include="Commodity\CommodityResetStrikeOptionTest.cs" />
+    <Compile Include="Commodity\CommoditySpreadOptionTest.cs" />
+    <Compile Include="Commodity\CommodityVanillaOptionTest.cs" />
+    <Compile Include="CommonTests\BondForwardTest.cs" />
+    <Compile Include="CommonTests\BondFutureCalculatorTest.cs" />
+    <Compile Include="CommonTests\BondFutureTest.cs" />
+    <Compile Include="CommonTests\BondTest.cs" />
+    <Compile Include="CommonTests\CalendarTest.cs" />
+    <Compile Include="CommonTests\CdsTest.cs" />
+    <Compile Include="CommonTests\CurveInterpolationTest.cs" />
+    <Compile Include="CommonTests\ForwardFlatCurveTest.cs" />
+    <Compile Include="CommonTests\HullWhiteParameterEstimation.cs" />
+    <Compile Include="CommonTests\LoanTest.cs" />
+    <Compile Include="CommonTests\MarketTest.cs" />
+    <Compile Include="CommonTests\MathMethods\Math\NormalCdfTest.cs" />
+    <Compile Include="CommonTests\ScheduleTest.cs" />
+    <Compile Include="CommonTests\TestBondCurve.cs" />
+    <Compile Include="CommonTests\TestIrsCurve.cs" />
+    <Compile Include="EquityTest\AmericanOptionTest.cs" />
+    <Compile Include="EquityTest\AsianOptionTest.cs" />
+    <Compile Include="EquityTest\BarrierOptionTest.cs" />
+    <Compile Include="EquityTest\ConstantLeveragedNoteTest.cs" />
+    <Compile Include="EquityTest\DynamicLeveragedNoteTest.cs" />
+    <Compile Include="EquityTest\RangeAccrualTest.cs" />
+    <Compile Include="EquityTest\VanillaOptionTest.cs" />
+    <Compile Include="Exotic\CallableBondTest.cs" />
+    <Compile Include="Exotic\ConvertibleBondReport.cs" />
+    <Compile Include="Exotic\ConvertibleBondTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\HistoricalDataLoadHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\BondFuture\ConversionFactorTest.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\TF1712DeliverableBondInfo_20171113.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\TF1712DeliverableBondInfo_20171114.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Xl\MarketInfoJson.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Benchmark\YieldcurveBuiltResult.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\QbTF1606CfTest.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\QbT1609BasisTest.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\QbTF1609CfTest.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\QbTF1612CfTest.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\TF1509DeliverableBondInfo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BondFuture\TF1512DeliverableBondInfo.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\B1M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\B1W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\B2W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\B_1M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\B_1W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\B_2W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Depo1Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Depo3M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Depo3Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Depo6M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Fr001.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Fr007.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalEquityPrices\hs300.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalEquityPrices\hsgy.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Shibor1D.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Shibor1M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Shibor1W.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Shibor1Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Shibor3M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HistoricalIndexRates\Shibor6M.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\HistoricalIndexRates\Lrb5Y.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\101658062.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.ComputeService.Data.CommonModels\Qdp.ComputeService.Data.CommonModels.csproj">
+      <Project>{0b71d997-9452-4d68-b3dc-e50d01115de3}</Project>
+      <Name>Qdp.ComputeService.Data.CommonModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation.csproj">
+      <Project>{30ec6e1b-63a1-4985-b9b2-071203940bd6}</Project>
+      <Name>Qdp.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base.csproj">
+      <Project>{7281d9ad-8878-4b41-af55-e4f42211d07f}</Project>
+      <Name>Qdp.Pricing.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Ecosystem\Qdp.Pricing.Ecosystem.csproj">
+      <Project>{e9e753f1-269e-423b-8849-539806c35fcc}</Project>
+      <Name>Qdp.Pricing.Ecosystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Base\Qdp.Pricing.Library.Base.csproj">
+      <Project>{4c3ac4ec-7bba-40a2-8c26-ba759020eed6}</Project>
+      <Name>T</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Commodity\Qdp.Pricing.Library.Commodity.csproj">
+      <Project>{0304b878-d0a0-406a-bfd9-7860c03658a0}</Project>
+      <Name>Qdp.Pricing.Library.Commodity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Common\Qdp.Pricing.Library.Common.csproj">
+      <Project>{faa5f77f-1abf-4144-8c70-a72632719bcb}</Project>
+      <Name>Qdp.Pricing.Library.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Equity\Qdp.Pricing.Library.Equity.csproj">
+      <Project>{f17b5431-9905-44ae-955d-d6417a986613}</Project>
+      <Name>Qdp.Pricing.Library.Equity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Exotic\Qdp.Pricing.Library.Exotic.csproj">
+      <Project>{6afe5a92-bb0c-4239-8a73-161e79cb8322}</Project>
+      <Name>Qdp.Pricing.Library.Exotic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.FixedIncome\Qdp.Pricing.Library.FixedIncome.csproj">
+      <Project>{d5c90ed8-6d38-4924-b6f7-8e3742d02e66}</Project>
+      <Name>Qdp.Pricing.Library.FixedIncome</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /E /Y $(SolutionDir)\Dependencies\nlopt-zip\* $(SolutionDir)\build\UnitTest\Debug\</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

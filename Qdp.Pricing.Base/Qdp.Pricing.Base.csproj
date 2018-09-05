@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7281D9AD-8878-4B41-AF55-E4F42211D07F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qdp.Pricing.Base</RootNamespace>
+    <AssemblyName>Qdp.Pricing.Base</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\build\Debug\Qdp.Pricing.Base.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enums\MarketConventionEnums.cs" />
+    <Compile Include="Enums\MathOperationEnums.cs" />
+    <Compile Include="Enums\PricingResultEnums.cs" />
+    <Compile Include="Enums\ProductConventionEnums.cs" />
+    <Compile Include="Enums\InstrumentType.cs" />
+    <Compile Include="Enums\ValuationParameterEnums.cs" />
+    <Compile Include="Implementations\CalendarImpl.cs" />
+    <Compile Include="Implementations\Cashflow.cs" />
+    <Compile Include="Implementations\ComponentPv.cs" />
+    <Compile Include="Implementations\CurveRisk.cs" />
+    <Compile Include="Implementations\DayCountImpl.cs" />
+    <Compile Include="Implementations\DayGap.cs" />
+    <Compile Include="Implementations\PnLResult.cs" />
+    <Compile Include="Implementations\PricingRequest.cs" />
+    <Compile Include="Implementations\PricingResult.cs" />
+    <Compile Include="Implementations\RateRecord.cs" />
+    <Compile Include="Implementations\Term.cs" />
+    <Compile Include="Interfaces\ICalendar.cs" />
+    <Compile Include="Interfaces\IDayCount.cs" />
+    <Compile Include="Interfaces\IPricingResult.cs" />
+    <Compile Include="Interfaces\ITerm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\BizDayAdjustmentExtension.cs" />
+    <Compile Include="Utilities\IndexRatesDictionaryExtensions.cs" />
+    <Compile Include="Utilities\QdpConsts.cs" />
+    <Compile Include="Utilities\DictionaryExtension.cs" />
+    <Compile Include="Utilities\DoubleExtension.cs" />
+    <Compile Include="Utilities\MatrixExtensions.cs" />
+    <Compile Include="Utilities\PriceRequestExtension.cs" />
+    <Compile Include="Utilities\PricingBaseException.cs" />
+    <Compile Include="Utilities\PricingResultExtension.cs" />
+    <Compile Include="Utilities\StringExtension.cs" />
+    <Compile Include="Utilities\StringToTypeExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation.csproj">
+      <Project>{30ec6e1b-63a1-4985-b9b2-071203940bd6}</Project>
+      <Name>Qdp.Foundation</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Calendars\aud.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\cad.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\chf.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\chn.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\chn_ib.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\eur.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\gbp.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\hkd.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\jpy.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\myr.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\nzd.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\rub.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\sgd.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\thb.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Calendars\usd.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

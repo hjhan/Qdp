@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathNet.Numerics" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.ComputeService.Data.CommonModels\Qdp.ComputeService.Data.CommonModels_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Library.Base\Qdp.Pricing.Library.Base_DotNetCore.csproj" />
+  </ItemGroup>
+
+</Project>

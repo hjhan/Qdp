@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9E753F1-269E-423B-8849-539806C35FCC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qdp.Pricing.Ecosystem</RootNamespace>
+    <AssemblyName>Qdp.Pricing.Ecosystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\build\Debug\Qdp.Pricing.Ecosystem.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\Dependencies\log4net-zip\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DependencyTree\DependentObject.cs" />
+    <Compile Include="DependencyTree\DependentObjectManager.cs" />
+    <Compile Include="ExcelWrapper\XlAggregator.cs" />
+    <Compile Include="ExcelWrapper\XlUdfBond.cs" />
+    <Compile Include="ExcelWrapper\XlMarket.cs" />
+    <Compile Include="ExcelWrapper\XlTradeCache.cs" />
+    <Compile Include="ExcelWrapper\XlMktOperations.cs" />
+    <Compile Include="ExcelWrapper\XlManager.cs" />
+    <Compile Include="ExcelWrapper\XlUdfBondFutures.cs" />
+    <Compile Include="ExcelWrapper\XlUdfMarket.cs" />
+    <Compile Include="ExcelWrapper\XlUdfIrs.cs" />
+    <Compile Include="ExcelWrapper\XlUtilities.cs" />
+    <Compile Include="Market\BuiltObjects\CurveData.cs" />
+    <Compile Include="Market\IQdpMarket.cs" />
+    <Compile Include="Market\MarketFunctions.cs" />
+    <Compile Include="Market\PrebuiltQdpMarket.cs" />
+    <Compile Include="Market\QdpMarket.cs" />
+    <Compile Include="Market\YieldCurveDependentObjects\BaseCurveObject.cs" />
+    <Compile Include="Market\YieldCurveDependentObjects\CurveBuildHelper.cs" />
+    <Compile Include="Market\YieldCurveDependentObjects\InstrumentCurveObject.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trade\Commodity\CommodityForwardCNYVf.cs" />
+    <Compile Include="Trade\Commodity\CommoditySwapVf.cs" />
+    <Compile Include="Trade\Equity\LookbackOptionVf.cs" />
+    <Compile Include="Trade\TradeUtil.cs" />
+    <Compile Include="Trade\Equity\BinaryOptionVf.cs" />
+    <Compile Include="Trade\Equity\BarrierOptionVf.cs" />
+    <Compile Include="Trade\Equity\AsianOptionVf.cs" />
+    <Compile Include="Trade\Equity\RainbowOptionVf.cs" />
+    <Compile Include="Trade\Equity\RangeAccrualVf.cs" />
+    <Compile Include="Trade\Equity\ResetStrikeOptionVf.cs" />
+    <Compile Include="Trade\Equity\SpreadOptionVf.cs" />
+    <Compile Include="Trade\Equity\VanillaOptionVf.cs" />
+    <Compile Include="Trade\Exotic\ConvertibleBondVf.cs" />
+    <Compile Include="Trade\FixedIncome\BasisSwapVf.cs" />
+    <Compile Include="Trade\FixedIncome\HoldingPeriodVf.cs" />
+    <Compile Include="Trade\FixedIncome\BondFuturesVf.cs" />
+    <Compile Include="Trade\FixedIncome\BondVf.cs" />
+    <Compile Include="Trade\FixedIncome\CreditDefaultSwapVf.cs" />
+    <Compile Include="Trade\FixedIncome\FixedLegVf.cs" />
+    <Compile Include="Trade\FixedIncome\FloatingLegVf.cs" />
+    <Compile Include="Trade\FixedIncome\FxOptionVf.cs" />
+    <Compile Include="Trade\FixedIncome\InterestRateSwapVf.cs" />
+    <Compile Include="Trade\FixedIncome\AbsWithRepurchaseVf.cs" />
+    <Compile Include="Trade\FixedIncome\LoanVf.cs" />
+    <Compile Include="Trade\IValuationFunction.cs" />
+    <Compile Include="Trade\ValuationFunction.cs" />
+    <Compile Include="Utilities\ExtensionFunctions.cs" />
+    <Compile Include="Utilities\PricingEcosystemException.cs" />
+    <Compile Include="Utilities\VfFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.ComputeService.Data.CommonModels\Qdp.ComputeService.Data.CommonModels.csproj">
+      <Project>{0b71d997-9452-4d68-b3dc-e50d01115de3}</Project>
+      <Name>Qdp.ComputeService.Data.CommonModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation.csproj">
+      <Project>{30ec6e1b-63a1-4985-b9b2-071203940bd6}</Project>
+      <Name>Qdp.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base.csproj">
+      <Project>{7281d9ad-8878-4b41-af55-e4f42211d07f}</Project>
+      <Name>Qdp.Pricing.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Base\Qdp.Pricing.Library.Base.csproj">
+      <Project>{4c3ac4ec-7bba-40a2-8c26-ba759020eed6}</Project>
+      <Name>T</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Commodity\Qdp.Pricing.Library.Commodity.csproj">
+      <Project>{0304b878-d0a0-406a-bfd9-7860c03658a0}</Project>
+      <Name>Qdp.Pricing.Library.Commodity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Common\Qdp.Pricing.Library.Common.csproj">
+      <Project>{faa5f77f-1abf-4144-8c70-a72632719bcb}</Project>
+      <Name>Qdp.Pricing.Library.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Equity\Qdp.Pricing.Library.Equity.csproj">
+      <Project>{f17b5431-9905-44ae-955d-d6417a986613}</Project>
+      <Name>Qdp.Pricing.Library.Equity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Qdp.Pricing.Library.Exotic\Qdp.Pricing.Library.Exotic.csproj">
+      <Project>{6afe5a92-bb0c-4239-8a73-161e79cb8322}</Project>
+      <Name>Qdp.Pricing.Library.Exotic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configurations\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent Condition="'$(OS)' == 'Windows_NT'">xcopy /E /Y $(SolutionDir)\Dependencies\computeservice-data-zip\Configurations\* $(SolutionDir)\build\Debug\Configurations\</PostBuildEvent>
+    <PostBuildEvent Condition="'$(OS)' != 'Windows_NT'">cp -rf $(SolutionDir)\Dependencies\computeservice-data-zip\Configurations\* $(SolutionDir)\build\Debug\Configurations\</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /E /Y $(SolutionDir)\Qdp.ComputeService.Data.CommonModels\Configurations\* $(SolutionDir)\build\Debug\Configurations\</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

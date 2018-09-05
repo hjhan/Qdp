@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Qdp.ComputeService.Data.CommonModels\Qdp.ComputeService.Data.CommonModels_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Foundation\Qdp.Foundation_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Base\Qdp.Pricing.Base_DotNetCore.csproj" />
+    <ProjectReference Include="..\Qdp.Pricing.Library.Common\Qdp.Pricing.Library.Common_DotNetCore.csproj" />
+  </ItemGroup>
+
+</Project>
