@@ -140,6 +140,9 @@ Qdp中计算的三个基本概念：Instrument/MarketCondition/Engine。
     var result = engine.Calculate(put, market, PricingRequest.All);
 ```
 
+### Python代码示例
+[Python Samples](https://github.com/YieldChain/Qdp/Python_Samples)
+
 ## 参考文档
 http://api.yieldchain.com/qdponlinehelp
 
