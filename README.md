@@ -141,7 +141,7 @@ Qdp中计算的三个基本概念：Instrument/MarketCondition/Engine。
 ```
 
 ### Python代码示例
-[Python Samples](https://github.com/YieldChain/Qdp/Python_Samples)
+[Python Samples](https://github.com/YieldChain/Qdp/tree/master/Python_Samples)
 
 ## 参考文档
 http://api.yieldchain.com/qdponlinehelp

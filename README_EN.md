@@ -140,7 +140,7 @@ Some sample code£º
 ```
 
 ### Python Samples
-[Python Samples](https://github.com/YieldChain/Qdp/Python_Samples)
+[Python Samples](https://github.com/YieldChain/Qdp/tree/master/Python_Samples)
 
 ## Document
 http://api.yieldchain.com/qdponlinehelp
