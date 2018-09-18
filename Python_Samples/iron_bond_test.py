@@ -1,14 +1,14 @@
-# run it with pythonnet
+# run it with IronPython
 import clr
 import sys
-# replace with your own DLL path
 sys.path.append("D:\\SourceCode\\Git\\QdpGitHub_YieldChain\\build\\Release")
-clr.AddReference("D:\\SourceCode\\Git\\QdpGitHub_YieldChain\\build\\Release\\Qdp.Pricing.Library.Common.dll")
+clr.AddReference("Qdp.Pricing.Library.Common")
+clr.AddReference("Qdp.Foundation")
+clr.AddReference("Qdp.Pricing.Base")
 
 import System
-from System.Collections.Generic import Dictionary, List
-from System import String, Double
-Tuple = getattr(System, "Tuple`1")
+from System.Collections.Generic import Dictionary
+from System import String, Double, Tuple, Action
 from Qdp.Pricing.Base.Interfaces import IPricingResult
 from Qdp.Pricing.Library.Common import Bond
 from Qdp.Pricing.Library.Common.Utilities.Coupons import FixedCoupon
@@ -39,8 +39,8 @@ bond = Bond(
 
 engine = BondEngine(BondYieldPricer())
 
-# always provide dummy action and do all the assignments later
-market = MarketCondition([])
+# always provide a dummy action and do all the assignments later
+market = MarketCondition(Action[MarketCondition](lambda x: x))
 market.ValuationDate.Value = Date(2018, 8, 1)
 prices = Dictionary[String, Tuple[PriceQuoteType, Double]]()
 prices["bond"] = Tuple[PriceQuoteType, Double](PriceQuoteType.Clean, 100.0)
@@ -48,10 +48,9 @@ market.MktQuote.Value = prices
 
 cashflows = bond.GetCashflows(market)
 for cashflow in cashflows:
-	print(cashflow.PaymentDate, cashflow.PaymentAmount)
+	print(cashflow.PaymentDate.ToString(), cashflow.PaymentAmount)
 
-calculate = engine.Calculate.__overloads__[System.Object, IMarketCondition, PricingRequest]
-result = calculate(bond, market, PricingRequest.Convexity)
+result = engine.Calculate(bond, market, PricingRequest.Convexity)
 print("Ai:", result.Ai)
 print("Ytm:", result.Ytm)
 print("Pv01", result.Pv01)

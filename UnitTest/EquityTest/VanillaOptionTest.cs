@@ -89,7 +89,7 @@ namespace UnitTest.EquityTest
 
             var discountCurve = new YieldCurve(
                 name: fr007CurveName,
-                referenceDate: new Date(2014, 3, 8),
+                referenceDate: valueDate,
                 keyPoints: fr007RateDefinition.Select(x => Tuple.Create((ITerm)new Term(x.Tenor), x.Rate)).ToArray(),
                 bda: BusinessDayConvention.ModifiedFollowing,
                 dayCount: new Act365(),
@@ -101,7 +101,7 @@ namespace UnitTest.EquityTest
 
             var dividendCurve = new YieldCurve(
                 name: dividendCurveName,
-                referenceDate: new Date(2014, 3, 8),
+                referenceDate: valueDate,
                 keyPoints: dividendRateDefinition.Select(x => Tuple.Create((ITerm)new Term(x.Tenor), x.Rate)).ToArray(),
                 bda: BusinessDayConvention.ModifiedFollowing,
                 dayCount: new Act365(),
